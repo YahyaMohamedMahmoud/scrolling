@@ -1,0 +1,6 @@
+{
+  "name": "scrolling-animation",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

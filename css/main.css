@@ -1,0 +1,145 @@
+body {
+      font-family: "Test Founders Grotesk Cnd Medium";
+}
+.mt-80 {
+  margin-top: 80px;
+}
+.main .for-sticky {
+    height: 100lvh;
+    display: grid;
+    position: sticky;
+    top: 0;
+}
+.cards .card1 {
+  padding: 25px 56px 59px;
+  position: relative;
+transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(1.56deg);
+z-index: -1;
+/* position: absolute; */
+}
+.cards .about-card {
+    height: 110lvh;
+
+}
+.cards {
+    z-index: -1;
+    flex-flow: column;
+    grid-area: 1 / 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    display: flex;
+    position: relative;
+    overflow: clip;
+}
+.cards .card-num1{
+        align-self: flex-end;
+}
+.cards .card-num2{
+        align-self: flex-start;
+}
+.cards .card-num3{
+        align-self: flex-end;
+}
+.cards .card-num4{
+        align-self: flex-start;
+}
+
+.cards .card2 {
+transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-1.56deg);
+}
+.cards .card1 .smile-image {
+  position: absolute;
+  top: -65px;
+  left: 43%;
+  transform: translate3d(0px, 0px, 0px) rotate(-8.1333deg);
+}
+.cards .card2 .smile-image {
+     transform: translate3d(0px, 0px, 0px) rotate(9.6443deg);
+}
+.cards .card1 .smile-image img {
+    width: 98px;
+}
+.cards .card1 .heading {
+    font-size: 100px;
+    letter-spacing: -.01em;
+    text-transform: uppercase;
+    line-height: 75%;
+}
+.cards .card1 .parag {
+    letter-spacing: -.01em;
+    line-height: 92%;
+    color: #335c30;
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+.cards .card1  .text-icon {
+  position: relative;
+}
+.cards .card1  .text-icon img {
+      animation: skew .8s steps(7, end) infinite;
+}
+
+.cards .card1 .layer {
+  position: absolute;
+    top: -28px;
+    left: 3%;
+    transform: rotate(-7deg);
+}
+.cards .card1 .layer img {
+    animation: skew .8s steps(7, end) infinite;
+    width: 210px;
+    grid-area: 1 / 1;
+
+}
+
+@keyframes skew {
+    0% {
+    transform: translateY(1px);
+}
+20% {
+    transform: translate(-1px, -1px);
+}
+32% {
+    transform: translate(0);
+}
+48% {
+    transform: translate(0);
+}
+64% {
+    transform: translate(1px);
+}
+80% {
+    transform: translateY(-1px);
+}
+100% {
+    transform: translate(0);
+}
+}
+.cards {
+    position: relative;
+}
+.cards .more-img {
+    position: absolute;
+    /* bottom: -150px; */
+    right: 23%;
+    display: grid;
+}
+.cards .more-img img{
+    width: 185px;
+    grid-area: 1 / 1;
+      animation: skew .8s steps(7, end) infinite;
+}
+.cards .card-num4 .layer {
+    position: absolute;
+    top: 17px;
+    left: 9%;
+    transform: rotate(-7deg);
+}
+.cards .card-num4 .layer img{
+    width: 68px;
+}
