@@ -1,5 +1,6 @@
 body {
       font-family: "Test Founders Grotesk Cnd Medium";
+      overflow-x: hidden;
 }
 .mt-80 {
   margin-top: 80px;
@@ -20,6 +21,31 @@ z-index: -1;
 .cards .about-card {
     height: 110lvh;
 
+}
+.seq-canvas {
+  position: fixed; 
+  left: 50%;
+  top: 50%;              
+  transform: translate(-50%, -50%);
+  width: auto;           /* ← بدل min(1000px, 80vw) */
+  height: auto;          /* ← خلينا الـ JS يتحكم في الحجم */
+  max-width: 90vw;       /* ← علشان ميطلعش برة الشاشة */
+  max-height: 90vh;      /* ← نفس الفكرة */
+  display: block;
+  pointer-events: none; 
+  z-index: 10;
+}
+
+.for-sticky .cards {
+  position: relative;
+  z-index: 2;
+}
+
+.cards .card1,
+.cards .card2,
+.cards .about-card {
+  z-index: 3;
+  position: relative;
 }
 .cards {
     z-index: -1;
@@ -46,6 +72,10 @@ z-index: -1;
 .cards .card-num4{
         align-self: flex-start;
 }
+/* .about-card4 {
+        height: 500vh;
+
+} */
 
 .cards .card2 {
 transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-1.56deg);
@@ -124,9 +154,10 @@ transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-
     position: relative;
 }
 .cards .more-img {
-    position: absolute;
+    position: fixed;
     /* bottom: -150px; */
     right: 23%;
+    top: 40%;
     display: grid;
 }
 .cards .more-img img{
@@ -142,4 +173,136 @@ transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-
 }
 .cards .card-num4 .layer img{
     width: 68px;
+}
+
+.for-sticky .final-title {
+    color:#335c30;
+    letter-spacing: -.03em;
+    font-size: 150px;
+    line-height: 76%;
+        opacity: 0;
+    transform: translateY(50px);
+}
+.for-sticky .final-title span{
+    color: #90b96d;
+    display: block;
+    margin-top: 15px;
+    letter-spacing: -.03em;
+       transform: translateY(100px) translateZ(-100px);
+    transform-style: preserve-3d;
+}
+
+.final-sec .strawberry,
+.final-sec .arrow1,
+.final-sec .biscuit,
+.final-sec .arrow2,
+.final-sec .biscuit-img1,
+.final-sec .biscuit-img2,
+.final-sec .strawberry-img1,
+.final-sec .strawberry-img2 {
+    opacity: 0;
+    transform: translateY(150px) translateZ(-200px) rotateX(-45deg);
+    transform-style: preserve-3d;
+}
+
+.final-sec {
+    position: relative;
+    perspective: 1000px; /* ← مهم للـ 3D effect */
+    transform-style: preserve-3d;
+}
+.for-sticky .final-sec {
+    position: relative;
+}
+.for-sticky .final-sec .strawberry {
+    position: absolute;
+    right: 12%;
+    top: 5%;
+    display: grid;
+    transform: rotate(-10deg);
+}
+.for-sticky .final-sec .strawberry img{
+    grid-area: 1 / 1;
+    width: 150px;
+    animation: skew .8s steps(7, end) infinite;
+}
+.for-sticky .final-sec .arrow1 {
+    position: absolute;
+    right: 16%;
+    top: 30%;
+    display: grid;
+}
+.for-sticky .final-sec .arrow1 img{
+    grid-area: 1 / 1;
+    width: 70px;
+    animation: skew .8s steps(7, end) infinite;
+
+}
+
+.for-sticky .final-sec .biscuit {
+  position: absolute;
+    left: 12%;
+    top: 6%;
+    display: grid;
+    transform: rotate(-10deg);
+}
+.for-sticky .final-sec .biscuit img{
+    grid-area: 1 / 1;
+    width: 100px;
+    animation: skew .8s steps(7, end) infinite;
+
+}
+.for-sticky .final-sec .arrow2 {
+   position: absolute;
+    left: 16%;
+    top: 30%;
+    display: grid;
+    transform: rotate(25deg);
+}
+.for-sticky .final-sec .arrow2 img{
+    grid-area: 1 / 1;
+    width: 90px;
+    animation: skew .8s steps(7, end) infinite;
+
+}
+
+.for-sticky .final-sec .biscuit-img1{
+    position: absolute;
+    left: -4%;
+    top: -3%;
+}
+.for-sticky .final-sec .biscuit-img1 img{
+    width: 200px;
+    filter: blur(3px);
+}
+.for-sticky .final-sec .biscuit-img2{
+    position: absolute;
+    left: 16%;
+    bottom: 5%;
+    transform: rotate(280deg);
+}
+.for-sticky .final-sec .biscuit-img2 img {
+    width: 100px;
+}
+
+.for-sticky .final-sec .strawberry-img1{
+   position: absolute;
+    right: -10%;
+    top: 5%;
+    transform: rotate(-23deg);
+
+}
+.for-sticky .final-sec .strawberry-img1 img{
+    width: 345px;
+    filter: blur(4px);
+}
+
+
+.for-sticky .final-sec .strawberry-img2{
+    position: absolute;
+    right: 23%;
+    top: -3%;
+    transform: rotate(-5deg);
+}
+.for-sticky .final-sec .strawberry-img2 img {
+    width: 150px;
 }

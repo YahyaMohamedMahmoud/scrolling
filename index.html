@@ -6,14 +6,17 @@
     <title>Scrolling Animation</title>
     <link href="https://db.onlinewebfonts.com/c/0a91a2ab0cf103534372fc5e7401854f?family=Test+Founders+Grotesk+Cnd+Medium" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="bg-[#e8efe4]">
 
 
 
-    <section class="main-sec h-[720lvh] mt-80 p-11">
+    <section class="main-sec h-[570lvh] mt-80 p-11">
+
+      <canvas id="seq-canvas" class="seq-canvas"></canvas>
 
       <div class="for-sticky">
 
@@ -123,7 +126,7 @@
           
           </div>
 
-          <div class="about-card card-num4">
+          <div class="about-card card-num4 about-card4">
             
                     <div class="card1 card2 card-num4 bg-[#b6cba5] w-[650px] rounded-[14px] flex justify-center items-center flex-col">
                        <div class="smile-image">
@@ -168,10 +171,65 @@
             <img src="img/68b9fcc383366c0bb0fe9ca6_sequence-more-for-coffee-lovers.svg" alt="more-img">
             <img src="img/68b9fcc383366c0bb0fe9ca6_sequence-more-for-coffee-lovers.svg" alt="more-img">
           </div>
+          
         </div>
 
-        <div class="final-sec">
-          
+        <div class="final-sec flex justify-center items-center mt-80">
+         <div class="final-text text-center">
+           <h3 class="final-title">
+            Matcha, just the <br>
+            way you like it. <br>
+            <span class="sub-final-text">
+              What’s your flavor?
+            </span>
+          </h3>
+         </div>
+
+
+        <div class="strawberry">
+           <img src="img/68bb4ef605d3c803020c0a8c_sequence-strawberry-cheesecake.svg" alt="strawberry">
+           <img src="img/68bb4ef605d3c803020c0a8c_sequence-strawberry-cheesecake.svg" alt="strawberry">
+        </div>
+
+        <div class="arrow1">
+          <img src="img/68bb51400be6f0687f9cb522_sequence-strawberry-cheesecake-arrow.svg" alt="arrow1">
+          <img src="img/68bb51400be6f0687f9cb522_sequence-strawberry-cheesecake-arrow.svg" alt="arrow1">
+        </div>
+
+        <div class="biscuit">
+           <img src="img/68bb4a56d6965dfedaaf9bbb_sequence-vanilla-crumble.svg" alt="biscuit">
+           <img src="img/68bb4a56d6965dfedaaf9bbb_sequence-vanilla-crumble.svg" alt="biscuit">
+        </div>
+
+        <div class="arrow2">
+          <img src="img/68bb4d0addb7dabb6793ee05_sequence-vanilla-crumble-arrow.svg" alt="arrow1">
+          <img src="img/68bb4d0addb7dabb6793ee05_sequence-vanilla-crumble-arrow.svg" alt="arrow1">
+        </div>
+
+
+        <div class="biscuit-img1">
+          <img src="img/68bb559a04860444181393aa_sequence-cookie.webp" alt="strawberry-img">
+
+        </div>
+        <div class="biscuit-img2">
+          <img src="img/68bb559a04860444181393aa_sequence-cookie.webp" alt="strawberry-img">
+
+        </div>
+
+
+          <div class="strawberry-img1">
+          <img src="img/68bb559a1333de45c53ee927_sequence-strawberry.webp" alt="strawberry-img">
+
+        </div>
+        <div class="strawberry-img2">
+          <img src="img/68bb559a1333de45c53ee927_sequence-strawberry.webp" alt="strawberry-img">
+
+        </div>
+
+
+
+
+
         </div>
 
       </div>
