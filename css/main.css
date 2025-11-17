@@ -27,10 +27,10 @@ z-index: -1;
   left: 50%;
   top: 50%;              
   transform: translate(-50%, -50%);
-  width: auto;           /* ← بدل min(1000px, 80vw) */
-  height: auto;          /* ← خلينا الـ JS يتحكم في الحجم */
-  max-width: 90vw;       /* ← علشان ميطلعش برة الشاشة */
-  max-height: 90vh;      /* ← نفس الفكرة */
+  width: auto;          
+  height: auto;        
+  /* max-width: 90vw;        */
+  max-height: 90vh;   
   display: block;
   pointer-events: none; 
   z-index: 10;
@@ -216,7 +216,7 @@ transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-
 .for-sticky .final-sec .strawberry {
     position: absolute;
     right: 12%;
-    top: 5%;
+    bottom: -30%;
     display: grid;
     transform: rotate(-10deg);
 }
@@ -228,7 +228,7 @@ transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-
 .for-sticky .final-sec .arrow1 {
     position: absolute;
     right: 16%;
-    top: 30%;
+    bottom: -55%;
     display: grid;
 }
 .for-sticky .final-sec .arrow1 img{
@@ -241,7 +241,7 @@ transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-
 .for-sticky .final-sec .biscuit {
   position: absolute;
     left: 12%;
-    top: 6%;
+    bottom: -35%;
     display: grid;
     transform: rotate(-10deg);
 }
@@ -254,7 +254,7 @@ transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-
 .for-sticky .final-sec .arrow2 {
    position: absolute;
     left: 16%;
-    top: 30%;
+    bottom: -55%;
     display: grid;
     transform: rotate(25deg);
 }
@@ -277,7 +277,7 @@ transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-
 .for-sticky .final-sec .biscuit-img2{
     position: absolute;
     left: 16%;
-    bottom: 5%;
+    bottom: -100%;
     transform: rotate(280deg);
 }
 .for-sticky .final-sec .biscuit-img2 img {
@@ -300,9 +300,151 @@ transform: translate(-2.1586%, 3.965%) translate3d(0px, 42.2989px, 0px) rotate(-
 .for-sticky .final-sec .strawberry-img2{
     position: absolute;
     right: 23%;
-    top: -3%;
+    bottom: -45%;
     transform: rotate(-5deg);
 }
 .for-sticky .final-sec .strawberry-img2 img {
     width: 150px;
+}
+
+
+
+
+
+
+
+/* 📱 Tablet Size */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .cards {
+    width: 90%;
+    margin: auto;
+    }
+
+.for-sticky .final-sec .biscuit-img1 {
+    left: -7%;
+ 
+}
+
+
+.for-sticky .final-sec .biscuit-img2 img {
+    width: 65px;
+}
+
+.for-sticky .final-sec .biscuit-img2 {
+ 
+  left: 2%;
+}
+
+.for-sticky .final-sec .strawberry , .for-sticky .final-sec .arrow1 , .for-sticky .final-sec .biscuit , .for-sticky .final-sec .arrow2 ,     .for-sticky .final-sec .strawberry-img1 {
+display:none;
+}
+
+.for-sticky .final-sec .strawberry-img2 {
+
+    right: 12%;
+    top: 0%; 
+
+}
+
+.for-sticky .final-sec .strawberry-img2 img {
+    width: 75px;
+}
+
+.for-sticky .final-title {
+
+    font-size: 90px; 
+}
+
+.cards .more-img {
+
+    right: 15%;
+}
+
+.cards .card1, .cards .card2, .cards .about-card {
+    width: 100%;
+}
+
+.for-sticky .final-sec .biscuit-img1 img {
+    width: 115px;
+
+}
+
+.for-sticky .final-sec .strawberry-img1 img {
+    width: 145px;
+}
+
+.for-sticky .final-sec .strawberry-img1 {
+    right: -3%;
+    top: 32%;
+}
+
+}
+
+
+@media (max-width: 767px) {
+    .cards .card1 {
+    width: 100%;
+    padding: 21px 5px 40px; 
+}
+.cards .card1 .layer img {
+    width: 148px;
+}
+.cards .card1 .smile-image img {
+    width: 80px;
+}
+.cards .card1 .smile-image {
+    top: -40px;
+    left: 40%;
+}
+.cards {
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: visible;
+}
+.cards .card1 {
+   padding: 25px 6px 30px;
+    transform: none;
+}
+.cards .card1 .heading {
+    font-size: 70px;
+}
+
+.cards .card1 .parag {
+    font-size: 29px;
+    margin-top: 29px;
+}
+.cards .card1 .layer {
+    top: -15px;
+}
+.for-sticky .final-sec .strawberry-img1 , .biscuit-img1 , .strawberry-img2 , .biscuit-img2{ 
+display:none;
+}
+.for-sticky .final-title {
+    font-size: 79px;
+}
+.for-sticky .final-sec .strawberry{
+    right: 5%;
+    bottom: -45%;
+}
+.for-sticky .final-sec .arrow1
+ {
+    right: 16%;
+    bottom: -77%;
+    display: grid;
+    transform: rotate(290deg) !important;
+}
+.for-sticky .final-sec .arrow1 img {
+    width: 55px;
+}
+.for-sticky .final-sec .arrow2 {
+    left: 12%;
+    bottom: -65%;
+    transform: rotate(70deg) !important;
+}
+.for-sticky .final-sec .arrow2 img {
+    width: 70px;
+}
+
+
 }

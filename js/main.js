@@ -26,24 +26,25 @@ for (let i = 0; i < frameCount; i++) {
 
 function setupCanvasSize(img) {
   const DPR = window.devicePixelRatio || 1;
-  const cssWidth = Math.min(1000, window.innerWidth * 0.4);
+
+  const isMobile = window.innerWidth <= 768;
+  const cssWidth = isMobile
+    ? window.innerWidth             // ← Full width على الموبايل
+    : Math.min(1000, window.innerWidth * 0.4);
+
   const aspect = img.naturalWidth / img.naturalHeight || 1.777;
   const cssHeight = Math.min(window.innerHeight * 5, cssWidth / aspect);
 
-  // set CSS size
   canvas.style.width = cssWidth + "px";
   canvas.style.height = cssHeight + "px";
-
-console.log(cssWidth);
-
 
   canvas.width = Math.round(cssWidth * DPR);
   canvas.height = Math.round(cssHeight * DPR);
 
-
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.scale(DPR, DPR);
 }
+
 
 
 function drawImageToCanvas(img) {
